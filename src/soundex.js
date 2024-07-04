@@ -22,12 +22,13 @@ function returnName(name) {
 return name ? name: '';
 }
 
-    
-function generateSoundex(name) {
-    returnName(name);
-    if (name !== '') {
-    let soundex = [name[0].toUpperCase()]; 
-    let prevCode = getSoundexCode(name[0]);
+function checkName(name) {
+let soundex = [name[0].toUpperCase()]; 
+return soundex;
+}
+
+function checkSoundex(name) {
+let prevCode = getSoundexCode(name[0]);
 
     for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
@@ -36,6 +37,14 @@ function generateSoundex(name) {
         }
         prevCode = code;
     }
+
+}
+function generateSoundex(name) {
+    returnName(name);
+    if (name !== '') {
+    checkName(name);
+    checkSoundex(name);    
+    
 
    checkLength(soundex);
     return soundex.join('');
