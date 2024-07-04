@@ -42,9 +42,6 @@ function generateSoundex(name) {
  
 }
 
-checkSoundex(name) {
- 
-}
 
 
 module.exports = {
