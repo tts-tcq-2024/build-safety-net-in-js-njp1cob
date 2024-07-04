@@ -23,7 +23,7 @@ return name ? name: '';
 }
 
 function generateSoundex(name) {
-    returnName(name);
+   let name = returnName(name);
     if (name !== '') {
     let soundex = [name[0].toUpperCase()]; 
     let prevCode = getSoundexCode(name[0]);
@@ -34,10 +34,8 @@ function generateSoundex(name) {
         }
         prevCode = code;
     }
-    
    checkLength(soundex);
     return soundex.join('');
-
  }
   
 }
