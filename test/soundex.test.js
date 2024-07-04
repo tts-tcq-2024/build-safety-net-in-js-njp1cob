@@ -1,15 +1,15 @@
 const { expect } = require('chai');
 const { generateSoundex } = require('../src/soundex');
 const { soundexFilter } = require('../src/soundex');
-const { validate } = require('../src/soundex');
+
 
 describe('Soundex Algorithm', () => {
 
-    let soundex;
-    beforeEach(() => {
-        soundex = [];
-    });
-        
+    // let soundex;
+    // beforeEach(() => {
+    //    soundex = [];
+    // });
+         
     it('should handle empty strings', () => {
         expect(generateSoundex("")).to.equal("");
     });
