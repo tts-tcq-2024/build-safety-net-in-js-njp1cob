@@ -11,12 +11,12 @@ function getSoundexCode(char) {
     return soundexDict[char] || '0';
 }
 
-// function checkLength(soundex) {
-//     while (soundex.length < 4) {
-//         soundex.push('0');
-//     }
-//     return soundex;
-// }
+function checkLength(soundex) {
+    while (soundex.length < 4) {
+        soundex.push('0');
+    }
+    return soundex;
+}
 
 function returnName(name) {
 return name ? name.toUpperCase(): '';
@@ -35,12 +35,13 @@ function checkSoundex(name) {
    let prevCode = getSoundexCode(name[0]);
      for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
-        if (code !== '0' && code !== prevCode) {
-            soundex.push(code);
-        }
+        // if (code !== '0' && code !== prevCode) {
+        //     soundex.push(code);
+        // }
+        (code !== '0' && code !== prevCode) ? soundex.push(code): soundex;
         prevCode = code;
     }
-   // checkLength(soundex);
+   checkLength(soundex);
     return soundex.join('');
  }
 
