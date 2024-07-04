@@ -30,15 +30,20 @@ function generateSoundex(name) {
 }
 }
 
+function soundexOutput(i, code) {
+let soundex = [name[0]]; 
+if (code !== '0' && code !== prevCode && i !== 0) {
+            soundex.push(code);
+        }
+}
+
 function checkSoundex(name) {
-  let soundex = [name[0]]; 
+  
    let prevCode = getSoundexCode(name[0]);
      for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
-        // if (code !== '0' && code !== prevCode) {
-        //     soundex.push(code);
-        // }
-        (code !== '0' && code !== prevCode) ? soundex.push(code): soundex;
+        
+     
         prevCode = code;
     }
    checkLength(soundex);
