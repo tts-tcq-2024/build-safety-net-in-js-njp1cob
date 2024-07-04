@@ -1,4 +1,5 @@
 let soundex = [];
+let prevCode;
 function getSoundexCode(char) {
    
     const soundexDict = {
@@ -32,9 +33,7 @@ function generateSoundex(name) {
 }
 }
 
-function checkSoundex(name) {
-     soundex = [name[0]]; 
-      let prevCode = getSoundexCode(name[0]);
+function test1(name, soundex, prevCode) {
       for (let i = 1; i < name.length; i++) {
          let code = getSoundexCode(name[i]);
          if (code !== '0' && code !== prevCode) {
@@ -42,7 +41,13 @@ function checkSoundex(name) {
          }
          prevCode = code;
       }
-   
+}
+
+function checkSoundex(name) {
+     soundex = [name[0]]; 
+     prevCode = getSoundexCode(name[0]);
+
+   test1(name, soundex, prevCode); 
      checkLength(soundex);
      return soundex.join('');
  }
