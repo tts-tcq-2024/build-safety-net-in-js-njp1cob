@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const { generateSoundex } = require('../src/soundex');
 const { soundexFilter } = require('../src/soundex');
+const { validate } = require('../src/soundex');
 
 describe('Soundex Algorithm', () => {
     it('should handle empty strings', () => {
@@ -15,7 +16,7 @@ describe('Soundex Algorithm', () => {
         expect(soundexFilter("B", "B", 1 )).to.equal("B000");
     });
 
-    it('should validate soundex', () => {
+    it('should validate function', () => {
         expect(validate()).toHaveBeenCalled();
     });
     
