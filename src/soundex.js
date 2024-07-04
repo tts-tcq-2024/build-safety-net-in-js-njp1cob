@@ -17,7 +17,7 @@ function generateSoundex(name) {
     let soundex = [name[0]];
     let prevCode = getSoundexCode(name[0]);
 
-    for (let i = 1; i < name.length && soundex.length < 4; i++) {
+    for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
         if (code !== '0' && code !== prevCode) {
             soundex.push(code);
