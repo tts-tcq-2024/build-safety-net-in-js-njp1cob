@@ -30,24 +30,36 @@ function generateSoundex(name) {
 }
 }
 
-function soundexOutput(i, code) {
-let soundex = [name[0]]; 
-if (code !== '0' && code !== prevCode && i !== 0) {
+function test(soundex, prevCode, name) {
+      for (let i = 1; i < name.length; i++)
+      {
+         let code = getSoundexCode(name[i]);
+         if (code !== '0' && code !== prevCode && i !== 0)
+         {
             soundex.push(code);
-        }
-return soundex;
+         }
+         prevCode = code;
+      }
+   return {soundex, prevCode};
+   
 }
 
-function checkSoundex(name) {
-  
-   let prevCode = getSoundexCode(name[0]);
-     for (let i = 1; i < name.length; i++) {
-        let code = getSoundexCode(name[i]);
-        soundexOutput(i, code);
-        prevCode = code;
-    }
-   
-   checkLength(soundex);
+function checkSoundex(name)
+   {
+      let soundex = [name[0]]; 
+      let prevCode = getSoundexCode(name[0]);
+      // for (let i = 1; i < name.length; i++)
+      // {
+      //    let code = getSoundexCode(name[i]);
+      //    if (code !== '0' && code !== prevCode && i !== 0)
+      //    {
+      //       soundex.push(code);
+      //    }
+      //    prevCode = code;
+      // }
+      {soundex, prevCode} = test(soundex, prevCode, name);
+      
+     checkLength(soundex);
     return soundex.join('');
  }
 
