@@ -57,7 +57,7 @@ function checkSoundex(name)
       //    }
       //    prevCode = code;
       // }
-      {soundex, prevCode} = test(soundex, prevCode, name);
+     ({ soundex, prevCode } = test(soundex, prevCode, name));
       
      checkLength(soundex);
     return soundex.join('');
