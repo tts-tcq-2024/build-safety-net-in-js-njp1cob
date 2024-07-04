@@ -14,5 +14,9 @@ describe('Soundex Algorithm', () => {
     it('should validate soundex', () => {
         expect(soundexFilter("B", "B", 1 )).to.equal("B000");
     });
+
+    it('should validate soundex', () => {
+        expect(validate()).toHaveBeenCalled();
+    });
     
 });
