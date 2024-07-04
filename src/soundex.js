@@ -11,12 +11,12 @@ function getSoundexCode(char) {
     return soundexDict[char] || '0';
 }
 
-function checkLength(soundex) {
-    while (soundex.length < 4) {
-        soundex.push('0');
-    }
-    return soundex;
-}
+// function checkLength(soundex) {
+//     while (soundex.length < 4) {
+//         soundex.push('0');
+//     }
+//     return soundex;
+// }
 
 function returnName(name) {
 return name ? name.toUpperCase(): '';
