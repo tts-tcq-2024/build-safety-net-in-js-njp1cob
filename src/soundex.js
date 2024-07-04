@@ -11,6 +11,8 @@ function getSoundexCode(char) {
     return soundexDict[char] || '0';
 }
 
+soundex: any;
+
 function checkLength(soundex) {
     while (soundex.length < 4) {
         soundex.push('0');
@@ -30,37 +32,19 @@ function generateSoundex(name) {
 }
 }
 
-function test(soundex, prevCode, name) {
-      for (let i = 1; i < name.length; i++)
-      {
+function checkSoundex(name) {
+      soundex = [name[0]]; 
+      let prevCode = getSoundexCode(name[0]);
+      for (let i = 1; i < name.length; i++) {
          let code = getSoundexCode(name[i]);
-         if (code !== '0' && code !== prevCode && i !== 0)
-         {
+         if (code !== '0' && code !== prevCode) {
             soundex.push(code);
          }
          prevCode = code;
       }
-   return {soundex, prevCode};
    
-}
-
-function checkSoundex(name)
-   {
-      let soundex = [name[0]]; 
-      let prevCode = getSoundexCode(name[0]);
-      // for (let i = 1; i < name.length; i++)
-      // {
-      //    let code = getSoundexCode(name[i]);
-      //    if (code !== '0' && code !== prevCode && i !== 0)
-      //    {
-      //       soundex.push(code);
-      //    }
-      //    prevCode = code;
-      // }
-     ({ soundex, prevCode } = test(soundex, prevCode, name));
-      
      checkLength(soundex);
-    return soundex.join('');
+     return soundex.join('');
  }
 
 
