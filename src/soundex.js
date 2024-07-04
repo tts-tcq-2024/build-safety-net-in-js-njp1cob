@@ -15,9 +15,11 @@ function checkLength(soundex) {
         soundex.push('0');
     }
 }
+function returnName(name) {
+name ? return name: return '';
+}
 function generateSoundex(name) {
-    if (!name) return '';
-
+    returnName(name);
     let soundex = [name[0]];
     let prevCode = getSoundexCode(name[0]);
 
