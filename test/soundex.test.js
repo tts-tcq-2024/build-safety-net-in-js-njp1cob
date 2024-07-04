@@ -9,6 +9,8 @@ describe('Soundex Algorithm', () => {
     it('should handle single characters', () => {
         expect(generateSoundex("A")).to.equal("A000");
     });
-
+    it('should validate sundex', () => {
+        expect(soundexFilter("B", "B", 1 )).to.equal("B000");
+    });
     
 });
