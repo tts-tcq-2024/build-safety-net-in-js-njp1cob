@@ -10,18 +10,20 @@ function getSoundexCode(char) {
     };
     return soundexDict[char] || '0';
 }
+
 function checkLength(soundex) {
     while (soundex.length < 4) {
         soundex.push('0');
     }
     return soundex;
 }
+
 function returnName(name) {
 return name ? name: '';
 }
-function generateSoundex(name) {
-    returnName(name);
-    let soundex = [name[0]];
+
+function checkSoundex(name) {
+let soundex = [name[0]];
     let prevCode = getSoundexCode(name[0]);
 
     for (let i = 1; i < name.length; i++) {
@@ -32,9 +34,17 @@ function generateSoundex(name) {
         prevCode = code;
     }
 
-   soundex = checkLength(soundex);
-
+   checkLength(soundex);
     return soundex.join('');
+
+}
+    
+function generateSoundex(name) {
+    returnName(name);
+    if (name !== '') {
+    checkSoundex(name);
+ }
+  
 }
 
 module.exports = {
