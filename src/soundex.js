@@ -10,7 +10,11 @@ function getSoundexCode(char) {
     };
     return soundexDict[char] || '0';
 }
-
+function checkLength(soundex) {
+    while (soundex.length < 4) {
+        soundex.push('0');
+    }
+}
 function generateSoundex(name) {
     if (!name) return '';
 
@@ -25,9 +29,7 @@ function generateSoundex(name) {
         prevCode = code;
     }
 
-    while (soundex.length < 4) {
-        soundex.push('0');
-    }
+    checkLength(soundex);
 
     return soundex.join('');
 }
