@@ -16,7 +16,7 @@ function checkLength(soundex) {
     }
 }
 function returnName(name) {
-name ? return name: return '';
+return name ? name: '';
 }
 function generateSoundex(name) {
     returnName(name);
