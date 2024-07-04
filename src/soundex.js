@@ -26,15 +26,7 @@ function generateSoundex(name) {
    returnName(name);
     if (name !== '') {
 
-   let final = checkSoundex(name);   
-       
-    return final; 
- }
- 
-}
-
-checkSoundex(name) {
-   let soundex = [name[0]]; 
+    let soundex = [name[0]]; 
    let prevCode = getSoundexCode(name[0]);
      for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
@@ -46,6 +38,12 @@ checkSoundex(name) {
    checkLength(soundex);
     return soundex.join('');
 
+ }
+ 
+}
+
+checkSoundex(name) {
+ 
 }
 
 
