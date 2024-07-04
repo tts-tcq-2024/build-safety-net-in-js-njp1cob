@@ -21,9 +21,11 @@ function checkLength(soundex) {
 function returnName(name) {
 return name ? name: '';
 }
-
-function checkSoundex(name) {
-let soundex = [name[0]];
+    
+function generateSoundex(name) {
+    returnName(name);
+    if (name !== '') {
+    let soundex = [name[0].toUpperCase()];
     let prevCode = getSoundexCode(name[0]);
 
     for (let i = 1; i < name.length; i++) {
@@ -37,12 +39,6 @@ let soundex = [name[0]];
    checkLength(soundex);
     return soundex.join('');
 
-}
-    
-function generateSoundex(name) {
-    returnName(name);
-    if (name !== '') {
-    checkSoundex(name);
  }
   
 }
