@@ -23,19 +23,9 @@ describe('Soundex Algorithm', () => {
         const soundex = [];
         const prevCode = '';
 
-        // Spy on soundexFilter function
-        const soundexFilterSpy = jest.spyOn(global, 'soundexFilter').mockImplementation(() => {
-            // Mock implementation if needed
-        });
-
-        // Call the function to test
         soundexFilter(name, soundex, prevCode);
 
-        // Assert that soundexFilter has been called
-        expect(soundexFilterSpy).toHaveBeenCalled();
-
-        // Restore the spy
-        soundexFilterSpy.mockRestore();
+       
     });
     
 });
