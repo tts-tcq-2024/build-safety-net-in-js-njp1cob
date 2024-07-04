@@ -35,6 +35,7 @@ let soundex = [name[0]];
 if (code !== '0' && code !== prevCode && i !== 0) {
             soundex.push(code);
         }
+return soundex;
 }
 
 function checkSoundex(name) {
@@ -42,10 +43,10 @@ function checkSoundex(name) {
    let prevCode = getSoundexCode(name[0]);
      for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
-        
-     
+        soundexOutput(i, code);
         prevCode = code;
     }
+   
    checkLength(soundex);
     return soundex.join('');
  }
