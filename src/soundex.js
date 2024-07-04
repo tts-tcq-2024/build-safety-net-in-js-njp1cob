@@ -22,12 +22,12 @@ function checkLength(soundex) {
     return soundex;
 }
 
-function returnName(name) {
-return name ? name.toUpperCase(): '';
-}
+// function returnName(name) {
+// return name ? name.toUpperCase(): '';
+// }
 
 function generateSoundex(name) {
-   returnName(name);
+   if (!name) return '';
     if (name !== '') {
   let final = checkSoundex(name);
    return final;
