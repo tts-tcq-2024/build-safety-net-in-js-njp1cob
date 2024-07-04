@@ -34,9 +34,8 @@ function generateSoundex(name) {
 }
 
 checkSoundex(name) {
-
    let soundex = [name[0]]; 
-    let prevCode = getSoundexCode(name[0]);
+   let prevCode = getSoundexCode(name[0]);
      for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
         if (code !== '0' && code !== prevCode) {
