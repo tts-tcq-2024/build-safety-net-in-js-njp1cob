@@ -5,11 +5,11 @@ const { validate } = require('../src/soundex');
 
 describe('Soundex Algorithm', () => {
 
-        let soundex;
-
+    let soundex;
     beforeEach(() => {
         soundex = [];
     });
+        
     it('should handle empty strings', () => {
         expect(generateSoundex("")).to.equal("");
     });
@@ -18,11 +18,11 @@ describe('Soundex Algorithm', () => {
         expect(generateSoundex("A")).to.equal("A000");
     });
     
-     test('should handle empty input correctly', () => {
+     it('should handle empty input correctly', () => {
         const name = '';
         soundexFilter(name, soundex, '');
 
-        // Assert that soundex remains empty when input is empty
+        
         expect(soundex).toEqual([]);
     });
 
