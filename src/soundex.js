@@ -14,6 +14,7 @@ function checkLength(soundex) {
     while (soundex.length < 4) {
         soundex.push('0');
     }
+    return soundex;
 }
 function returnName(name) {
 return name ? name: '';
@@ -31,7 +32,7 @@ function generateSoundex(name) {
         prevCode = code;
     }
 
-    checkLength(soundex);
+   soundex = checkLength(soundex);
 
     return soundex.join('');
 }
