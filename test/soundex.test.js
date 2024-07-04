@@ -12,9 +12,14 @@ describe('Soundex Algorithm', () => {
         expect(generateSoundex("A")).to.equal("A000");
     });
     
-    it('should validate soundex', () => {
-        expect(soundexFilter("B", "B", 1 )).to.equal("B000");
+     test('should handle empty input correctly', () => {
+        const name = '';
+        soundexFilter(name, soundex, '');
+
+        // Assert that soundex remains empty when input is empty
+        expect(soundex).toEqual([]);
     });
+
 
     it('should validate function', () => {
         expect(validate()).toHaveBeenCalled();
