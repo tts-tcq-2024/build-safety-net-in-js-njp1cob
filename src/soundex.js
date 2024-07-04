@@ -36,12 +36,17 @@ function generateSoundex(name) {
 function test1(name, soundex, prevCode) {
       for (let i = 1; i < name.length; i++) {
          let code = getSoundexCode(name[i]);
-         if (code !== '0' && code !== prevCode) {
+       test2(code, prevCode, soundex);
+      }
+}
+
+function test2() {
+  if (code !== '0' && code !== prevCode) {
             soundex.push(code);
          }
          prevCode = code;
-      }
 }
+
 
 function checkSoundex(name) {
      soundex = [name[0]]; 
