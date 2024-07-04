@@ -1,5 +1,6 @@
 let soundex = [];
 let prevCode;
+let code;
 function getSoundexCode(char) {
    
     const soundexDict = {
@@ -35,7 +36,7 @@ function generateSoundex(name) {
 
 function test1(name, soundex, prevCode) {
       for (let i = 1; i < name.length; i++) {
-         let code = getSoundexCode(name[i]);
+         code = getSoundexCode(name[i]);
        test2(code, prevCode, soundex);
       }
 }
