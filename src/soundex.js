@@ -22,30 +22,19 @@ function returnName(name) {
 return name ? name: '';
 }
 
-function checkName(name) {
-let soundex = [name[0].toUpperCase()]; 
-return soundex;
-}
-
-function checkSoundex(name) {
-let prevCode = getSoundexCode(name[0]);
-
-    for (let i = 1; i < name.length; i++) {
+function generateSoundex(name) {
+    returnName(name);
+    if (name !== '') {
+    let soundex = [name[0].toUpperCase()]; 
+    let prevCode = getSoundexCode(name[0]);
+     for (let i = 1; i < name.length; i++) {
         let code = getSoundexCode(name[i]);
         if (code !== '0' && code !== prevCode) {
             soundex.push(code);
         }
         prevCode = code;
     }
-
-}
-function generateSoundex(name) {
-    returnName(name);
-    if (name !== '') {
-    checkName(name);
-    checkSoundex(name);    
     
-
    checkLength(soundex);
     return soundex.join('');
 
