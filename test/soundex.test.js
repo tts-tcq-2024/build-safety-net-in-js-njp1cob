@@ -1,9 +1,5 @@
 const { expect } = require('chai');
 const {  generateSoundex, validate, soundexFilter, checkSoundex } = require('../src/soundex');
-const chai = require('chai');
-const spies = require('chai-spies');
-chai.use(spies);
-
 
 describe('Soundex Algorithm', () => {
          
