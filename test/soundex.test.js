@@ -8,7 +8,7 @@ describe('Soundex Algorithm', () => {
     });
 
      it('should handle characters', () => {
-        expect(generateSoundex("ABC")).to.equal("A120");
+        expect(generateSoundex("SIEMENS")).to.equal("A120");
     });
 
      it('should handle single characters', () => {
