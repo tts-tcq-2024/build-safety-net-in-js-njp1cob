@@ -7,19 +7,16 @@ describe('Soundex Algorithm', () => {
         expect(generateSoundex("")).to.equal("");
     });
 
-     it('should handle generateSoundex', () => {
+     it('should handle characters', () => {
         expect(generateSoundex("ABC")).to.equal("A120");
     });
 
-     it('should handle generateSoundex with special characters', () => {
-        expect(generateSoundex("@14##")).to.equal("@000");
-    });
-
-      it('should handle generateSoundex', () => {
-        expect(generateSoundex("ABC")).to.equal("A120");
-    });
-    it('should handle single characters', () => {
+     it('should handle single characters', () => {
         expect(generateSoundex("A")).to.equal("A000");
+    });
+
+     it('Test generateSoundex with special characters', () => {
+        expect(generateSoundex("@14##")).to.equal("@000");
     });
 
     it('should call Validate', () => {
@@ -28,6 +25,11 @@ describe('Soundex Algorithm', () => {
 
      it('should call soundexFilter', () => {
        soundexFilter('ABC', [], '');
+       expect(validate('1', '1', 'B')).toHaveBeenCalled();
+    });
+
+     it('should call soundexFilter', () => {
+       soundexFilter('B', 'B', '1');
     });
 
      it('should call checkSoundex', () => {
