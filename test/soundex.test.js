@@ -13,9 +13,15 @@ describe('Soundex Algorithm', () => {
     });
 
      it('should handle generateSoundex', () => {
-        expect(generateSoundex("ABC"));
+        expect(generateSoundex("ABC")).to.equal("A120");
     });
 
+     it('should handle generateSoundex with special characters', () => {
+        expect(generateSoundex("@14##")).to.equal("");
+    });
+      it('should handle generateSoundex', () => {
+        expect(generateSoundex("ABC")).to.equal("A120");
+    });
     it('should handle single characters', () => {
         expect(generateSoundex("A")).to.equal("A000");
     });
