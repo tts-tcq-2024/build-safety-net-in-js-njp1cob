@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const {  soundexFilter } = require('../src/soundex');
+const {  generateSoundex, validate } = require('../src/soundex');
 
 describe('Soundex Algorithm', () => {
 
@@ -18,7 +18,7 @@ describe('Soundex Algorithm', () => {
 
 
 it('should handle single characters', () => {
-        expect(validate.toHaveBeenCalled());
+        expect(validate().toHaveBeenCalled());
     });
     
 });
