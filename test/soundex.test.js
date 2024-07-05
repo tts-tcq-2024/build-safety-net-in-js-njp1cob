@@ -28,7 +28,7 @@ describe('Soundex Algorithm', () => {
 
      it('should call soundexFilter with values', () => {
        soundexFilter('ABC', [], '');
-       expect(chai.spy.on(global, 'validate')).toHavebeenCalledWith('1', '1', 'B');
+       expect(chai.spy.on(global, 'validate')).to.have.been.called.with('1', '1', 'B');
     });
 
      it('should call soundexFilter', () => {
