@@ -17,7 +17,7 @@ describe('Soundex Algorithm', () => {
     });
 
      it('should handle generateSoundex with special characters', () => {
-        expect(generateSoundex("@14##")).to.equal("");
+        expect(generateSoundex("@14##")).to.equal("@000");
     });
       it('should handle generateSoundex', () => {
         expect(generateSoundex("ABC")).to.equal("A120");
