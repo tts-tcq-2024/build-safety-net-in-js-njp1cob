@@ -18,10 +18,10 @@ describe('Soundex Algorithm', () => {
 
 
     it('should call Validate', () => {
-        expect(validate().toHaveBeenCalled());
+        expect(validate()).toHaveBeenCalled();
     });
 
      it('should call soundexFilter', () => {
-        expect(soundexFilter("B", "B", 0).to.equal("B000"));
+        expect(soundexFilter("B", "B", 0)).to.equal("B000");
     });
 });
