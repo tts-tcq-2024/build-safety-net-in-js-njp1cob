@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const {  generateSoundex, validate, soundexFilter } = require('../src/soundex');
+const {  generateSoundex, validate, soundexFilter, checkSoundex } = require('../src/soundex');
 
 describe('Soundex Algorithm', () => {
 
@@ -26,5 +26,9 @@ describe('Soundex Algorithm', () => {
 
      it('should call soundexFilter', () => {
        soundexFilter('ABC', [], '');
+    });
+
+     it('should call checkSoundex', () => {
+       checkSoundex('ABC')
     });
 });
