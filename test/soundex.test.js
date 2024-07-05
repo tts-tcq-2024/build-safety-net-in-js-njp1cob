@@ -17,11 +17,11 @@ describe('Soundex Algorithm', () => {
     });
 
 
-    it('should handle single characters', () => {
+    it('should call Validate', () => {
         expect(validate().toHaveBeenCalled());
     });
 
-     it('should handle single characters', () => {
+     it('should call soundexFilter', () => {
         expect(soundexFilter("B", "B", 0).to.equal("B000"));
     });
 });
