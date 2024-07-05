@@ -59,6 +59,7 @@ function validate() {
 
 module.exports = {
     getSoundexCode,
-    generateSoundex
+    generateSoundex,
+    validate
 };
 
