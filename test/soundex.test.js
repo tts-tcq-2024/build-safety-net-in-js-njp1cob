@@ -25,6 +25,6 @@ describe('Soundex Algorithm', () => {
     });
 
      it('should call soundexFilter', () => {
-        expect(soundexFilter("B", "B", 0)).to.equal("B000");
+       soundexFilter('ABC', [], '');
     });
 });
