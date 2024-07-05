@@ -12,6 +12,10 @@ describe('Soundex Algorithm', () => {
         expect(generateSoundex("")).to.equal("");
     });
 
+     it('should handle generateSoundex', () => {
+        expect(generateSoundex("ABC");
+    });
+
     it('should handle single characters', () => {
         expect(generateSoundex("A")).to.equal("A000");
     });
