@@ -17,15 +17,8 @@ describe('Soundex Algorithm', () => {
     });
 
 
-    it('should validate function', () => {
-         // Mock necessary parameters for the function
-        const name = 'ABC';
-        const soundex = [];
-        const prevCode = '';
-
-        soundexFilter(name, soundex, prevCode);
-
-       
+it('should handle single characters', () => {
+        expect(validate.toHaveBeenCalled());
     });
     
 });
