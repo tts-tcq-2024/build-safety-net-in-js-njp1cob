@@ -13,7 +13,7 @@ describe('Soundex Algorithm', () => {
     });
 
      it('should handle generateSoundex', () => {
-        expect(generateSoundex("ABC");
+        expect(generateSoundex("ABC"));
     });
 
     it('should handle single characters', () => {
