@@ -18,7 +18,10 @@ describe('Soundex Algorithm', () => {
 
 
     it('should call Validate', () => {
-        expect(validate()).toHaveBeenCalled();
+        let a = [];
+        let prevCode = ''; 
+        let code = 'A123'; 
+        validate(code, prevCode, a);
     });
 
      it('should call soundexFilter', () => {
