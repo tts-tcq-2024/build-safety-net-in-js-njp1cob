@@ -22,10 +22,6 @@ function checkLength(soundex) {
     return soundex;
 }
 
-// function returnName(name) {
-// return name ? name.toUpperCase(): '';
-// }
-
 function generateSoundex(name) {
    if (!name) return '';
     if (name !== '') {
@@ -37,8 +33,7 @@ function generateSoundex(name) {
 function checkSoundex(name) {
      soundex = [name[0]]; 
      prevCode = getSoundexCode(name[0]);
-
-   soundexFilter(name, soundex, prevCode); 
+     soundexFilter(name, soundex, prevCode); 
      checkLength(soundex);
      return soundex.join('');
  }
@@ -61,6 +56,7 @@ module.exports = {
     getSoundexCode,
     generateSoundex,
     validate,
-   soundexFilter
+    soundexFilter,
+    checkSoundex
 };
 
