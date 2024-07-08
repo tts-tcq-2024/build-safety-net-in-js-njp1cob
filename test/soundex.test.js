@@ -22,16 +22,7 @@ describe('Soundex Algorithm', () => {
         expect(generateSoundex("@14##")).to.equal("@000");
     });
 
-    // it('should call Validate', () => {
-    //     validate('A123', '', []);
-    // });
 
-    //  it('should call soundexFilter with values', () => {
-    //    soundexFilter('ABC', [], '');
-    //           const validateSpy = chai.spy.on(global, 'validate');
-    //    validate('1', '1', 'B');
-    //    expect(validateSpy).to.have.been.called.with('1', '1', 'B');
-    // });
 
      it('should call soundexFilter with parameters', () => {
        soundexFilter('B', 'B', '1');
