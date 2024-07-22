@@ -1,9 +1,8 @@
 let soundex = [];
 let prevCode;
 let code;
-function getSoundexCode(char) {
-   
-    const soundexDict = {
+
+const soundexDict = {
         'B': '1', 'F': '1', 'P': '1', 'V': '1',
         'C': '2', 'G': '2', 'J': '2', 'K': '2', 'Q': '2', 'S': '2', 'X': '2', 'Z': '2',
         'D': '3', 'T': '3',
@@ -11,6 +10,7 @@ function getSoundexCode(char) {
         'M': '5', 'N': '5',
         'R': '6'
     };
+function getSoundexCode(char) {
     return soundexDict[char] || '0';
 }
 
@@ -53,9 +53,7 @@ function validate() {
 }
 
 module.exports = {
-    getSoundexCode,
     generateSoundex,
-    validate,
     soundexFilter,
     checkSoundex
 };
